@@ -1,0 +1,67 @@
+/* font  */
+.winky-font{
+  font-family: "Winky Sans", sans-serif;
+}
+/*start main formats */
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.w-full{
+  width: 100%;
+}
+.d-block{
+  display: block;
+}
+.h-full{
+  height: 100%;
+}
+/*end main formats */
+/*start display flex */
+.d-flex{
+  display: flex;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f-d-column{
+  flex-direction: column;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.space-b{
+  justify-content: space-between;
+}
+.flex-grow{
+  flex-grow: 1;
+}
+.al-cenetr{
+  align-items: center;
+}
+/*end display flex */
+/* start position */
+.p-relative{
+  position: relative;
+}
+.p-absolute{
+  position: absolute;
+}
+/* end position */
+/* start display grid */
+.d-grid{
+  display: grid;
+}
+/* end display grid */
+/*start grid system */
+.grid-system{
+  grid-template-columns: repeat(12 , 1fr);
+  grid-template-rows: repeat(3 , auto);
+}
+/*end grid system */
