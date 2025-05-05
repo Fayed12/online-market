@@ -26,7 +26,7 @@ let url = `http://localhost:3000/users`;
                                 }
                             }
                             if (username.value == result.username && password.value == result.password) {
-                                window.open("../product.html" , "_blank")
+                                location.replace("../product.html")
                             }
                             else if (username.value != result.username || password.value != result.password) {
                                 let p = document.createElement("p");
@@ -46,29 +46,6 @@ let url = `http://localhost:3000/users`;
     username.value = sessionStorage.getItem("username");
 })()
 
-// import data to page 
-// let btn = document.querySelector("button");
-// btn.addEventListener("click", (e) => {
-//     axios.get(url)
-//     .then(response => {
-//         // Access the response data
-//         if (response.status === 200) {
-//             const responseData = response.data;
-//             const inputUsername = username.value;
-//                 for (let i = 0; i < responseData.length; i++) {
-//                     if (responseData[i].username === inputUsername) {
-//                         var result = responseData[i];
-//                     }
-//                 }
-//                 if (username.value == result.username && password.value == result.password) {
-//                     location.href = "../product.html";
-//                 }
-//                 else if (username.value != result.username || password.value != result.password) {
-//                     let p = document.createElement("p");
-//                     p.textContent = "Incorrect password or username"
-//                     document.getElementById("invalidData").append(p);
-//                 }
-//             }
-//         })
-        
-//     })
+// ==============================================================================================================
+
+// end of code only update 

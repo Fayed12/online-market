@@ -12,11 +12,50 @@ body{
     font-size: 25px;
     cursor: pointer;
 }
-.product-header .menu-content{
+body .cover{
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.24);
     display: none;
+}
+.product-header .menu-content{
+    background-color:#ffffff;
+    min-height: 100vh;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    padding: 10px;
+    z-index: 1000;
+    transition: .7s;
+}
+.product-header .menu-content ul li{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #767676;
+    width: 60%;
+}
+.product-header .menu-content ul li a{
+    color: #767676;
 }
 .product-header .header-image img{
     width: 200px;
+}
+.cartcounter::before{
+    content: attr(data-counter);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e2231a;
+    color: white;
+    top: -12px;
+    right: -12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (max-width:768px){
     .product-header .menu i,
@@ -44,6 +83,7 @@ body{
     font-size: 35px;
     color: white;
     margin: 0;
+    padding-left: 10px;
 }
 .items .item-header select{
     outline: none;
@@ -73,14 +113,117 @@ body{
         width: 60px;
     }
 }
+.items .item-content .container {
+    gap: 4%;
+    row-gap: 30px;
+    padding: 20px 0px;
+}
+.items .item-content .container .box{
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 2px solid #ededef;
+}
+.items .item-content .container .box .image{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items .item-content .container .box img{
+    width: 120px ;
+    height: 120px;
+    border-radius: 50%;
+    transition: var(--transition);
+    outline: 1px solid #f17c13;
+    border: 3px solid white;
+}
+.items .item-content .container .box img:hover{
+    transform: scale(1.1);
+}
+.items .item-content .container .box .box-content{
+    width: 73%;
+    height: 180px;
+    padding: 10px 10px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.items .item-content .container .box .box-content h4{
+    font-size: 20px;
+    color: #e2231a;
+    font-weight: normal;
+}
+.items .item-content .container .box .box-content p{
+    font-size: 12px;
+    line-height: 1.1;
+    color: #777;
+}
+.items .item-content .container .box .box-content .price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.items .item-content .container .box .box-content .price span{
+    color: #e2231a;
+    font-size: 22px;
+}
+.items .item-content .container .box .box-content .price button{
+    outline: none;
+    border: 1px solid #e2231a;
+    background-color:white ;
+    color: #e2231a;
+    border-radius: 5px;
+    padding: 3px 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.items .item-content .container .box .box-content .price button:hover{
+    color: white;
+    background-color: #e2231a;
+}
+@media (max-width:992px) {
+    .items .item-content .container {
+        gap: 0%;
+        row-gap: 30px;
+    }
+    .items .item-content .container .box{
+        width:100%;
+    }
+}
+@media (max-width:768px) {
+    .items .item-content .container .box img{
+        width: 80px;
+        height: 80px;
+    }
+    .items .item-content .container .box .box-content h4{
+        font-size: 16x;
+    }
+    .items .item-content .container .box .box-content p{
+        font-size: 10px;
+    }
+    .items .item-content .container .box .box-content{
+        width: 73%;
+        height: 140px;
+    }
+    .items .item-content .container .box .box-content .price span{
+        font-size: 18px;
+    }
+    .items .item-content .container .box .box-content .price button{
+        font-size: 15px;
+    }
+}
 /* end item body */
 /* start footer */
 .footer-content  {
     min-height: 200px;
     background-color: var(--main-color);
     /*when set item delet absolute*/
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     width: 100%;
     color: white;
 }

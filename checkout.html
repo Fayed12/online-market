@@ -25,7 +25,9 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- product css file -->
     <link rel="stylesheet" href="css/product.css">
-    <title>product items</title>
+    <!-- cart css file -->
+    <link rel="stylesheet" href="css/cart.css">
+    <title>checkout</title>
 </head>
 <body class="p-relative">
     <div class="cover" id="bodycolor"></div>
@@ -63,26 +65,34 @@
             <div class="items">
                 <div class="item-header space-b flex-center">
                     <div class="title flex-center">
-                        <div class="image">
-                            <img src="assets/images/peek.png" alt="peek">
-                        </div>
-                        <p>Products</p>
-                    </div>
-                    <div class="list">
-                        <select name="sort" id="sort" title="sort elements">
-                            <option value="Name(A-Z)">Name(A-Z)</option>
-                            <option value="Name(Z-A)">Name(Z-A)</option>
-                            <option value="Price">Price</option>
-                        </select>
+                        <p>Checkout: Your Information</p>
                     </div>
                 </div>
-                <div class="item-content">
-                    <div class="container d-flex flex-wrap" id="item-content"></div>
+                <div >
+                    <div class="container">
+                        <div class="form-content flex-center f-d-column">
+                            <form>
+                                <div>
+                                    <input title="First name" type="text" name="fname" placeholder="First name" id="fname">
+                                </div>
+                                <div>
+                                    <input title="Last name" type="text" name="lname" placeholder="Last name" id="lname">
+                                </div>
+                                <div>
+                                    <input title="Postal Code" type="text" name="Postal" placeholder="Postal Code" id="Postal">
+                                </div>
+                            </form>
+                            <div class="d-flex space-b buttons">
+                                <button id="cancel" type="button">Cancel</button>
+                                <button id="continue" type="button">Continue</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
         <footer>
-            <div class="footer-content d-flex space-b">
+            <div class="footer-content d-flex space-b check-footer">
                 <div class="links d-flex f-d-column space-b">
                     <div class="social">
                         <ul class="d-flex">
@@ -115,5 +125,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="assets/products.js"></script>
+    <script src="assets/finish.js"></script>
 </body>
 </html>
